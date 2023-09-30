@@ -34,4 +34,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          run:  chmod +x gradlew , ./gradlew build sonar --info
+          command: chmod +x ./gradlew
+          run: ./gradlew build sonar --info
